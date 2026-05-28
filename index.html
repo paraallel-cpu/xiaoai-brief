@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>小爱简报 - 推荐方案</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, "PingFang SC", sans-serif; background: #121314; padding: 60px 40px; color: #eee; min-width: 1000px; }
+h1 { text-align: center; font-size: 28px; margin-bottom: 8px; }
+.subtitle { text-align: center; font-size: 13px; color: #888; margin-bottom: 60px; }
+.section { max-width: 1100px; margin: 0 auto 56px; }
+.section-title { font-size: 20px; font-weight: 700; margin-bottom: 16px; color: #fff; }
+.section-subtitle { font-size: 12px; color: #888; margin-bottom: 20px; }
+.divider { border: none; border-top: 1px solid #2a2b2e; margin: 48px auto; max-width: 1100px; }
+
+/* 背景卡片 */
+.bg-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.bg-card { background: #1e1f22; border-radius: 10px; padding: 16px; border: 1px solid #2a2b2e; }
+.bg-card .label { font-size: 11px; color: #74b9ff; margin-bottom: 6px; }
+.bg-card .text { font-size: 12px; color: #ccc; line-height: 1.6; }
+
+/* 推荐方案卡 */
+.rec-box { background: #1e1f22; border: 2px solid #74b9ff; border-radius: 12px; padding: 24px; }
+.rec-box h3 { font-size: 16px; color: #fff; margin-bottom: 8px; }
+.rec-box p { font-size: 13px; color: #ccc; line-height: 1.7; }
+.rec-box .tag { background: #74b9ff; color: #121314; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 4px; margin-right: 8px; }
+
+/* 图片 */
+.figma-img { width: 100%; border-radius: 10px; border: 1px solid #2a2b2e; }
+.phone-center { display: block; max-width: 360px; margin: 0 auto; border-radius: 20px; border: 1px solid #2a2b2e; }
+.phone-small { display: block; max-width: 260px; margin: 0 auto; border-radius: 16px; border: 1px solid #2a2b2e; }
+
+/* 入口横排 */
+.phone-row { display: flex; gap: 16px; align-items: flex-start; }
+.phone-col { flex: 1; text-align: center; }
+.phone-col img { width: 100%; max-width: 240px; border-radius: 14px; border: 1px solid #2a2b2e; }
+.phone-col .label { font-size: 11px; color: #999; margin-top: 8px; }
+.phone-col .rec-tag { font-size: 9px; background: #74b9ff; color: #121314; padding: 1px 5px; border-radius: 3px; margin-left: 4px; }
+
+/* 规划 */
+.plan-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.plan-card { background: #1e1f22; border-radius: 10px; padding: 20px; border: 1px solid #2a2b2e; }
+.plan-card h4 { font-size: 14px; margin-bottom: 10px; color: #74b9ff; }
+.plan-card p { font-size: 12px; color: #ccc; line-height: 1.8; }
+.plan-card .phase-tag { font-size: 10px; color: #f5a623; margin-bottom: 6px; }
+
+/* 节奏 */
+.timeline { display: flex; gap: 0; position: relative; margin-top: 20px; }
+.timeline::before { content: ''; position: absolute; top: 24px; left: 0; right: 0; height: 2px; background: #2a2b2e; }
+.tl-item { flex: 1; text-align: center; position: relative; }
+.tl-item .dot { width: 12px; height: 12px; background: #74b9ff; border-radius: 50%; margin: 18px auto 10px; position: relative; z-index: 2; }
+.tl-item .week { font-size: 12px; color: #74b9ff; font-weight: 600; margin-bottom: 4px; }
+.tl-item .desc { font-size: 11px; color: #999; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<h1>小爱简报 — 推荐方案</h1>
+<p class="subtitle">一期目标：天气/日程/待办/新闻四个模块 + 操作按钮 + 反馈，一个月内上线</p>
+
+<!-- 需求背景 -->
+<div class="section">
+<div class="section-title">需求背景</div>
+<div class="section-subtitle">用户每天早上要打开4-5个App拼凑今天的信息，简报把它们聚合到一个地方</div>
+<div class="bg-grid">
+<div class="bg-card">
+<div class="label">用户价值</div>
+<div class="text">先看天气、再看日程、再看待办、再看新闻——过去这些信息散落在不同地方，需要自己拼起来。简报一眼看完，知道今天该干嘛。</div>
+</div>
+<div class="bg-card">
+<div class="label">市场/PR</div>
+<div class="text">早晨亮屏，第一眼就看到AI已经帮我把今天的事理好了。谷歌/三星/华为/OPPO都做了，我们还没有。</div>
+</div>
+<div class="bg-card">
+<div class="label">业务价值</div>
+<div class="text">用户每天早晨和OS建立一次稳定关系，是后续服务的起点。接受简报=授权agent调用日历/通知/位置等全系统数据。</div>
+</div>
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- 推荐方案 -->
+<div class="section">
+<div class="section-title">推荐方案</div>
+<div class="rec-box">
+<h3><span class="tag">推荐</span>方案 2-PLUS：信息呈现 + 模块AI总结 + 单条操作按钮</h3>
+<p>每个模块有一句话AI总结标题 + 单条有行动按钮（打车/导航/订蛋糕/不感兴趣）。<br>端侧规则即可运行，成本≈0，无需云端LLM。</p>
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- 落地页卡片样式 -->
+<div class="section">
+<div class="section-title">落地页卡片样式 + 效果实测</div>
+<img src="images/card_style.png" class="figma-img" alt="卡片样式与效果实测">
+</div>
+
+<hr class="divider">
+
+<!-- 完整早报界面 -->
+<div class="section">
+<div class="section-title">完整早报界面</div>
+<img src="images/full_report.png" class="phone-small" alt="完整早报界面">
+</div>
+
+<hr class="divider">
+
+<!-- 开启方式与引导 -->
+<div class="section">
+<div class="section-title">开启方式与引导</div>
+<div class="phone-row">
+<div class="phone-col">
+<img src="images/entry_voice.png" alt="语音开启">
+<div class="label">语音开启</div>
+</div>
+<div class="phone-col">
+<img src="images/entry_notify.png" alt="通知触达">
+<div class="label">通知触达</div>
+</div>
+<div class="phone-col">
+<img src="images/entry_desktop.png" alt="桌面建议卡">
+<div class="label">桌面建议卡</div>
+</div>
+<div class="phone-col">
+<img src="images/entry_settings.png" alt="小爱设置页开关">
+<div class="label">小爱内固定开关</div>
+</div>
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- 分阶段规划 -->
+<div class="section">
+<div class="section-title">分阶段规划</div>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="phase-tag">本次</div>
+<h4>一期</h4>
+<p>
+<strong>内容：</strong>天气 / 日程 / 待办 / 新闻<br><br>
+<strong>操作推荐：</strong><br>
+• 天气异常 → 提醒带伞<br>
+• 待办紧急 → 回电/订蛋糕<br>
+• 日程外出 → 导航/打车<br>
+• 资讯 → 不感兴趣/多推类似<br><br>
+<strong>入口：</strong>语音开启/关闭 + 白名单默认开<br><br>
+<strong>同步验证：</strong><br>
+• 播报：实测小爱TTS效果<br>
+• 端侧模型总结效果实测
+</p>
+</div>
+<div class="plan-card">
+<h4>二期</h4>
+<p>
+更多内容上线，达到 OPPO/华为水平<br><br>
+• 增加 AI 摘要建议<br>
+• 小爱内增加入口和设置页<br>
+• 增加桌面建议卡入口<br>
+• 增加通知摘要、那年今日模块<br>
+• 增加多轮对话简单引导
+</p>
+</div>
+<div class="plan-card">
+<h4>三期</h4>
+<p>
+更多内容 + 语音播报<br><br>
+• 增加航班、快递、健康数据模块<br>
+• 支持根据聊天记录/浏览记录推送个性化内容<br>
+• 增加全篇语音播报能力
+</p>
+</div>
+</div>
+
+<div class="timeline">
+<div class="tl-item"><div class="dot"></div><div class="week">第一周</div><div class="desc">落地页 + 只干内容<br>小范围内测</div></div>
+<div class="tl-item"><div class="dot"></div><div class="week">第二周</div><div class="desc">加单模块总结建议<br>和整体总结建议</div></div>
+<div class="tl-item"><div class="dot"></div><div class="week">第三周</div><div class="desc">加操作推荐按钮<br>加反馈机制</div></div>
+</div>
+</div>
+
+</body>
+</html>
